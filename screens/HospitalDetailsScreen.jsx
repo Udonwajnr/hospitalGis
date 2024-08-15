@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import axios from 'axios';
 
 const HospitalDetailsScreen = ({ route }) => {
@@ -17,7 +17,6 @@ const HospitalDetailsScreen = ({ route }) => {
   }, [hospitalId]);
 
   if (!hospital) return <Text style={styles.loadingText}>Loading...</Text>;
-
   return (
     <ScrollView style={styles.container}>
       <View style={styles.headerContainer}>
@@ -50,11 +49,12 @@ const HospitalDetailsScreen = ({ route }) => {
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#F5F5F5',
   },
   headerContainer: {
     marginBottom: 16,
@@ -62,15 +62,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#4CAF50',
     marginBottom: 8,
   },
   description: {
     fontSize: 16,
-    color: '#666',
+    color: '#555',
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     padding: 16,
     marginBottom: 16,
@@ -83,12 +83,12 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#FFC107',
     marginBottom: 8,
   },
   cardText: {
     fontSize: 16,
-    color: '#666',
+    color: '#333',
     marginBottom: 4,
   },
   loadingText: {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     fontSize: 18,
-    color: '#333',
+    color: '#4CAF50',
     textAlign: 'center',
   },
 });
